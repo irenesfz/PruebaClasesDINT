@@ -21,23 +21,22 @@ namespace PruebaClases
     public partial class MainWindow : Window
     {
         //DataContext (tipo Obj)
-        Persona personaka = new Persona("Irene", 21);
+        Persona nuevo = new Persona();
         public MainWindow()
         {
             InitializeComponent();
-
-            NombreTextBox.DataContext = personaka;
-            EdadTextBox.DataContext = personaka;
+            NombreTextBox.DataContext = nuevo;
+            EdadTextBox.DataContext = nuevo;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(personaka.Nombre.ToString() + " "+ personaka.Edad.ToString());
+            MessageBox.Show(nuevo.Nombre.ToString() + " "+ nuevo.Edad.ToString());
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            personaka.Edad++;
+            nuevo.Edad++;
         }
     }
 }

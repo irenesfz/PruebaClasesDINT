@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:PruebaClases"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
+    <StackPanel x:Name="ContenedorStackPanel">
         <TextBlock>Nombre</TextBlock>
         <TextBox x:Name="NombreTextBox" Text="{Binding Path=Nombre}"></TextBox>
         <TextBlock>Edad</TextBlock>
-        <TextBox x:Name="EdadTextBox" Text="{Binding Path=Edad}"></TextBox>
+        <!--One way to source para que no aparezca el numero, va de destino a origen-->
+        <TextBox x:Name="EdadTextBox" Text="{Binding Path=Edad, Mode=OneWayToSource}"></TextBox>
         <Button Content="Mostrar" Click="Button_Click"></Button>
-        <Button Content="Cumpleaños" Click="Button_Click_1"></Button>
     </StackPanel>
 </Window>
